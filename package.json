@@ -35,8 +35,8 @@
       {
         "private": true,
         "provider": "github",
-        "owner": "Cloneable",
-        "repo": "Cloneable_app"
+        "owner": "CloneableApp",
+        "repo": "Cloneable"
       }
     ],
     "extraResources": [
