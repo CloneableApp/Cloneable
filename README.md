@@ -14,7 +14,7 @@
 
 ## Downloads
 
-All releases can be seen at the [Releases page](https://github.com/CloneableApp/Cloneable/releases). Or, go to the [website](https://cloneable.app/#downloads).
+Downloadable binaries are currently not available, but will be soon. For now, follow the steps in the Installation section.
 
 ### Requirements
 
@@ -29,6 +29,14 @@ git clone git@github.com:CloneableApp/Cloneable.git
 cd Cloneable
 npm install
 npm start
+```
+
+To get a working binary created in `dist/`:
+
+```
+npm install
+npm postinstall # might be necessary
+npm run app:dist
 ```
 
 ## Information
