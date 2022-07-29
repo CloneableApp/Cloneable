@@ -1,8 +1,6 @@
 # Cloneable
 
 [![License](https://img.shields.io/github/license/CloneableApp/Cloneable?label=License&color=brightgreen&cacheSeconds=3600)](./LICENSE)
-[![Release](https://img.shields.io/github/v/release/CloneableApp/Cloneable?label=Release&color=brightgreen&cacheSeconds=3600)](https://github.com/CloneableApp/Cloneable/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/CloneableApp/Cloneable/total?label=Downloads&cacheSeconds=3600)](https://cloneable.app/#downloads)
 
 > The all-in-one website downloader tool for offline browsing, archiving, backups, and more.
 
