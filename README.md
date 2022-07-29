@@ -14,7 +14,7 @@
 
 ## Downloads
 
-All releases can be seen at the [Releases page](https://github.com/CloneableApp/Cloneable/tags). Or, go to the [website](https://cloneable.app/#downloads).
+All releases can be seen at the [Releases page](https://github.com/CloneableApp/Cloneable/releases). Or, go to the [website](https://cloneable.app/#downloads).
 
 ### Requirements
 
