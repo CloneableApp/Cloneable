@@ -1,0 +1,133 @@
+{
+  "name": "cloneable",
+  "productName": "Cloneable",
+  "description": "The all-in-one website downloader tool for offline browsing, archiving, and backups.",
+  "version": "0.1.4",
+  "private": true,
+  "author": "Cloneable <cloneableapp@gmail.com>",
+  "copyright": "© Cloneable",
+  "homepage": "https://cloneable.app",
+  "main": "app/main.js",
+  "build": {
+    "appId": "com.cloneable.app",
+    "mac": {
+      "identity": null,
+      "category": "public.app-category.utilities",
+      "icon": "./assets/cloneable_large.png"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "./assets/cloneable_large.png",
+      "files": [
+        "**/*",
+        "!html/measurements/*"
+      ]
+    },
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    },
+    "publish": [
+      {
+        "private": true,
+        "provider": "github",
+        "owner": "Cloneable",
+        "repo": "Cloneable_app"
+      }
+    ],
+    "extraResources": [
+      {
+        "from": "build/mac/bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "build/win/bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "app:dir": "webpack --config=build/webpack.app.config.js --env=production && electron-builder --dir",
+    "app:dist": "webpack --config=build/webpack.app.config.js --env=production && electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "preunit": "webpack --config=build/webpack.unit.config.js --env=test",
+    "unit": "electron-mocha temp/specs.js --renderer --color --require source-map-support/register",
+    "pree2e": "webpack --config=build/webpack.app.config.js --env=test && webpack --config=build/webpack.e2e.config.js --env=test",
+    "e2e": "mocha temp/e2e.js --require source-map-support/register",
+    "test": "npm run unit && npm run e2e",
+    "start": "vite build && node build/start.js",
+    "build": "electron-builder --mac --windows",
+    "release-mac": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder --mac --publish always",
+    "release-win": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder --windows --publish always"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@rjsf/bootstrap-4": "^4.2.2",
+    "@rjsf/core": "^4.2.2",
+    "@tailwindcss/forms": "^0.5.2",
+    "better-sqlite3": "^7.6.2",
+    "chart.js": "^3.8.0",
+    "chartjs-adapter-moment": "^1.0.0",
+    "child_process": "^1.0.2",
+    "electron-root-path": "^1.0.16",
+    "electron-store": "^8.0.2",
+    "electron-unhandled": "^4.0.1",
+    "electron-updater": "^5.0.5",
+    "file-loader": "^6.2.0",
+    "fs": "^0.0.1-security",
+    "fs-jetpack": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "moment": "^2.29.4",
+    "node-dir": "^0.1.17",
+    "node-html-parser": "^5.3.3",
+    "parse-url": "^6.0.5",
+    "postcss-loader": "^7.0.1",
+    "react": "^18.2.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-bootstrap": "^1.6.5",
+    "react-dom": "^18.2.0",
+    "react-flatpickr": "^3.10.13",
+    "react-router-dom": "^6.3.0",
+    "react-tabs": "^5.1.0",
+    "react-toastify": "^9.0.7",
+    "react-transition-group": "^4.4.2",
+    "sanitize-filename": "^1.6.3",
+    "tailwindcss": "^3.1.7",
+    "tree-kill": "^1.2.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@vitejs/plugin-react": "^2.0.0",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.2",
+    "chai": "^4.1.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.7",
+    "electron": "^13.0.1",
+    "electron-builder": "^22.5.1",
+    "electron-mocha": "^10.0.0",
+    "mocha": "^8.3.2",
+    "postcss": "^8.4.14",
+    "source-map-support": "^0.5.6",
+    "spectron": "^15.0.0",
+    "style-loader": "^2.0.0",
+    "vite": "^3.0.2",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-merge": "^5.7.3",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

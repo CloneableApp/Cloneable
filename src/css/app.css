@@ -1,0 +1,242 @@
+/*
+    This is a mess, I know. My frontend-fu is not strong.
+*/
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .app {
+    /* Disable text selection, or your app will feel like a web page */
+  
+    /* Cover the whole window */
+    height: 100%;
+  
+    /* Smoother startup */
+    animation: fadein 0.5s;
+  }
+
+.highlight {
+    color: rgb(108 43 217);
+}
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.float-right {
+    float: right;
+}
+
+.next-step-button {
+    float: right;
+    clear: both;
+    margin-top: -30px;
+    margin-right: 10px;
+}
+
+.previous-step-button {
+    float: left;
+    clear: both;
+    margin-top: -30px;
+    margin-left: 10px;
+}
+
+.pb-100px {
+    padding-bottom: 100px;
+}
+
+.pb-30px {
+    padding-bottom: 30px;
+}
+
+.status-badge {
+    display: inline;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#root_domains, #root_headers {
+    min-width: 500px;
+}
+
+#root_acceptFilters, #root_rejectFilters, #root_includeDirs, #root_excludeDirs {
+    min-width: 500px;
+}
+
+.bg-purple-100 {
+    background-color: rgb(217, 211, 227);
+}
+.bg-purple-700 {
+    background-color: rgb(108 43 217);
+}
+
+a {
+    color: rgb(108 43 217);
+}
+a:hover, a:focus {
+    color: rgb(85 33 181);
+}
+button a, .button a {
+    color: white;
+}
+button:hover, .button:hover {
+    background-color: rgb(85 33 181);
+}
+button a:hover, .button a:focus {
+    color: white;
+}
+
+a strong {
+    color: rgb(71 85 105);
+}
+
+a strong:hover, a strong:focus {
+    color: rgb(85 33 181);
+}
+
+.bg-purple-800 {
+    background-color: rgb(85 33 181);
+}
+
+.float-left-important {
+    float: left !important;
+}
+
+.btn.btn-info {
+    background-color: rgb(108 43 217);
+    color: white;
+}
+
+.rjsf button[type="submit"] { 
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+.rjsf {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-group.field {
+    margin-bottom: 20px;
+}
+
+
+.form-label {
+    margin-right: 15px;
+    font-weight: bold;;
+}
+
+.form-check-label {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.form-group .row {
+    margin-bottom: 30px !important;
+}
+
+[type=integer] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-color: #6b7280;
+    border-width: 1px;
+    border-radius: 0;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    --tw-shadow: 0 0 #0000;
+}
+
+h5 {
+    font-weight: bold;;
+}
+
+.field-description {
+    margin-bottom: 10px;
+}
+
+.new-folder {
+    margin-top: -60px;
+    margin-left: -60px;
+    position: absolute;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.checkbox span {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.download-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.clone-logs {
+    max-height: 200px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#root_basePath, #root_cookiesFilePath {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+.clone-path {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1rem;
+    display: block;
+}
+
+.pb-5 {
+    padding-bottom: 1.25rem;
+}
+
+.dashboard-card {
+    max-height: 450px;
+    overflow-y: scroll;
+}
+
+.status-filters {
+    margin-bottom: 30px;
+}
+.status-filter {
+    cursor: pointer;
+    display: inline;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+.status-filter.active {
+    opacity: 1.0
+}
+
+.react-tabs__tab-list {
+    margin-bottom: 0px;
+}

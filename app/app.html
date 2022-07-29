@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cloneable</title>
+  </head>
+  <body class="font-inter antialiased bg-slate-100 text-slate-600">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+        if (localStorage.getItem('sidebar-expanded') == 'true') {
+            document.querySelector('body').classList.add('sidebar-expanded');
+        } else {
+            document.querySelector('body').classList.remove('sidebar-expanded');
+        }
+    </script>   
+    <div id="root"></div>
+    <script type="module" src="./main_app.js"></script>
+  </body>
+</html>
