@@ -1,13 +1,7 @@
-import resolveConfig from 'tailwindcss/resolveConfig';
 const moment = require('moment');
 import { app } from "electron";
 import parseUrl from 'parse-url';
 var sanitize = require("sanitize-filename");
-
-export const tailwindConfig = () => {
-  // Tailwind config
-  return resolveConfig('./src/css/tailwind.config.js')
-}
 
 export const hexToRGB = (h) => {
   let r = 0;
