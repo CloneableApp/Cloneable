@@ -25,6 +25,8 @@ To run Cloneable locally in development mode:
 ```
 git clone git@github.com:CloneableApp/Cloneable.git
 cd Cloneable
+nvm install
+nvm use
 npm install
 npm start
 ```
@@ -32,6 +34,8 @@ npm start
 To get a working binary created in `dist/`:
 
 ```
+nvm install
+nvm use
 npm install
 npm postinstall # might be necessary
 npm run app:dist
